@@ -1,0 +1,23 @@
+experiment_type: nn
+Architecture:
+  class: xLSTMMixer
+  parameters:
+    seq_len: 120
+    output_size: 1
+    xlstm_embedding_dim: 128
+    xlstm_num_heads: 16
+    xlstm_num_blocks: 4
+    xlstm_dropout: 0.09701833260027216
+    xlstm_conv1d_kernel_size: 8
+    num_mem_tokens: 8
+    backcast: true
+Training:
+  seed: 42
+  dataset_id: Panasonic18650PFData
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.0018055864308829384
+  loss_function: MSELoss

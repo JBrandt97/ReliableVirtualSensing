@@ -1,0 +1,22 @@
+experiment_type: isensd
+Architecture:
+  class: TST
+  parameters:
+    seq_len: 512
+    d_model: 256
+    n_heads: 16
+    num_layers: 4
+    dim_feedforward: 128
+    output_size: 1
+    dropout: 0.03562118132048498
+Training:
+  seed: 42
+  dataset_id: PPGDalia
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer_params:
+    lr: 0.0005129369496597367
+  loss_function: MSELoss
+SensorDropout:
+  mode: nr

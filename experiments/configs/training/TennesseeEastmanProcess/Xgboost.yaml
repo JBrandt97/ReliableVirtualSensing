@@ -1,0 +1,13 @@
+experiment_type: tree
+Architecture:
+  class: XGBRegressor
+  parameters:
+    n_estimators: 3000
+    learning_rate: 0.0057516524531345745
+    max_depth: 10
+    subsample: 0.953547580839042
+    colsample_bytree: 0.8985683341312752
+    reg_lambda: 0.15446492365726652
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess

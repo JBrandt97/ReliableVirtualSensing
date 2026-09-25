@@ -1,0 +1,55 @@
+experiment_type: f2f
+Architecture:
+  class: F2F
+  parameters:
+    seq_len: 20
+    d_model: 64
+    n_heads: 16
+    num_layers: 4
+    dim_feedforward: 512
+    output_size: 1
+    dropout: 0.06723321607829849
+    pos_encoding: fixed
+    activation: gelu
+    norm: BatchNorm
+Pretraining:
+  num_epochs: 600
+  batch_size: 1024
+  pretrain_head:
+    hidden_layer: 512
+    dropout: 0.0
+    num_heads: 1
+  optimizer_params:
+    initial_lr: 3.604e-05
+    peak_lr: 0.00066039
+    min_lr: 6.3811e-05
+    weight_decay: 0.0
+    warmup_div: 20
+    grad_clipping: 1.0
+    beta_1: 0.96075
+    beta_2: 0.96127
+  masking:
+    masking_ratio: 0.1
+    mean_mask_length: 20
+    masks:
+    - mean
+    - bias
+    - noise
+    bias_bounds:
+    - -3
+    - 3
+    noise_level: 1.0
+    multi_task_weights:
+    - 1
+    - 1
+    - 1
+Training:
+  seed: 42
+  dataset_id: REVS/2013_Monterey_Motorsports_Reunion
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer_params:
+    lr: 0.0005807464543006713
+  loss_function: MSELoss
+  freeze_backbone: true

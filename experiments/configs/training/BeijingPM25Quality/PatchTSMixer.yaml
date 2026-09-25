@@ -1,0 +1,22 @@
+experiment_type: nn
+Architecture:
+  class: PatchTSMixer
+  parameters:
+    seq_len: 24
+    output_size: 1
+    d_model: 64
+    num_layers: 7
+    patch_length: 4
+    expansion_factor: 4
+    dropout: 0.25865955181121614
+    head_dropout: 0.2647296065934185
+Training:
+  seed: 42
+  dataset_id: BeijingPM25Quality
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.0024235775441009983
+  loss_function: MSELoss

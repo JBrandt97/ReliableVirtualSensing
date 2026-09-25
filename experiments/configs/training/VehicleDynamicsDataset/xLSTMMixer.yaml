@@ -1,0 +1,23 @@
+experiment_type: nn
+Architecture:
+  class: xLSTMMixer
+  parameters:
+    seq_len: 50
+    output_size: 1
+    xlstm_embedding_dim: 512
+    xlstm_num_heads: 16
+    xlstm_num_blocks: 2
+    xlstm_dropout: 0.25847156488814554
+    xlstm_conv1d_kernel_size: 16
+    num_mem_tokens: 0
+    backcast: true
+Training:
+  seed: 42
+  dataset_id: VehicleDynamicsDataset
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.00225052563510115
+  loss_function: MSELoss

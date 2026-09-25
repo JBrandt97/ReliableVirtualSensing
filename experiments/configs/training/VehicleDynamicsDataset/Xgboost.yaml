@@ -1,0 +1,13 @@
+experiment_type: tree
+Architecture:
+  class: XGBRegressor
+  parameters:
+    n_estimators: 2600
+    learning_rate: 0.061538841609599264
+    max_depth: 3
+    subsample: 0.9218803046683969
+    colsample_bytree: 0.5506330045413648
+    reg_lambda: 3.524080751804236
+Training:
+  seed: 42
+  dataset_id: "VehicleDynamicsDataset"

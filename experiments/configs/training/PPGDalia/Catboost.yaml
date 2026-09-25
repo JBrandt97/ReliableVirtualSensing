@@ -1,0 +1,14 @@
+experiment_type: tree
+Architecture:
+  class: CatBoostRegressor
+  parameters:
+    iterations: 2900
+    learning_rate: 0.05271947905693437
+    depth: 10
+    l2_leaf_reg: 2.3106366714891755
+    loss_function: RMSE
+    verbose: 100
+    allow_writing_files: False
+Training:
+  seed: 42
+  dataset_id: PPGDalia

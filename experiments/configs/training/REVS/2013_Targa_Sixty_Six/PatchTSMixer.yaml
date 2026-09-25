@@ -1,0 +1,22 @@
+experiment_type: nn
+Architecture:
+  class: PatchTSMixer
+  parameters:
+    seq_len: 20
+    output_size: 1
+    d_model: 128
+    num_layers: 2
+    patch_length: 5
+    expansion_factor: 2
+    dropout: 0.19875668530619459
+    head_dropout: 0.09351332282682329
+Training:
+  seed: 42
+  dataset_id: REVS/2013_Targa_Sixty_Six
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.00036324869566766035
+  loss_function: MSELoss

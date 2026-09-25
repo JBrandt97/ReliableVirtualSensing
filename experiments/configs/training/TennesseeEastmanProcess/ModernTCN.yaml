@@ -1,0 +1,25 @@
+experiment_type: nn
+Architecture:
+  class: ModernTCN
+  parameters:
+    seq_len: 20
+    output_size: 1
+    d_model: 32
+    num_blocks: 4
+    large_kernel: 13
+    small_kernel: 3
+    patch_size: 1
+    patch_stride: 1
+    ffn_ratio: 1
+    dropout: 0.0848412020896481
+    head_dropout: 0.0027078930473251224
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 3.2763505715837504e-05
+  loss_function: MSELoss

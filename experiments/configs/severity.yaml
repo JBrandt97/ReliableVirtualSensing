@@ -1,0 +1,32 @@
+datasets:
+  - BeijingPM10Quality
+  - BeijingPM25Quality
+  - VehicleDynamicsDataset
+  - REVS/2013_Monterey_Motorsports_Reunion
+  - REVS/2013_Targa_Sixty_Six
+  - REVS/2014_Targa_Sixty_Six
+  - Panasonic18650PFData
+  - PPGDalia
+  - TennesseeEastmanProcess
+Evaluation:
+  model_classes:
+    - ModernTCN
+    - xLSTMMixer
+    - PatchTSMixer
+    - TST
+    - XGBRegressor
+    - CatBoostRegressor
+    - F2F
+    - ISensD
+    - PGD
+  seed: 42
+  batch_size: 512
+  features_to_corrupt: all
+  logs_root: logs
+  # data_root: data/processed      # default; override if your .ts files live elsewhere
+  device: auto
+
+severity:
+  k: 3.0
+  n_steps: 20
+  # exclude_failure_modes: []      # optional; e.g. [outliers] to drop specific modes

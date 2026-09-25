@@ -1,0 +1,14 @@
+experiment_type: tree
+Architecture:
+  class: CatBoostRegressor
+  parameters:
+    iterations: 3000
+    learning_rate: 0.06595083766763787
+    depth: 10
+    l2_leaf_reg: 4.401892584277504     
+    loss_function: RMSE
+    verbose: 100
+    allow_writing_files: False
+Training:
+  seed: 42
+  dataset_id: "REVS/2013_Targa_Sixty_Six"

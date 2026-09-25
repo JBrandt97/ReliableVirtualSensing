@@ -1,0 +1,13 @@
+experiment_type: tree
+Architecture:
+  class: XGBRegressor
+  parameters:
+    n_estimators: 2900
+    learning_rate: 0.03127027456615788
+    max_depth: 8
+    subsample: 0.8520845727318844
+    colsample_bytree: 0.5247363860975226
+    reg_lambda: 0.05161492897836703
+Training:
+  seed: 42
+  dataset_id: "REVS/2013_Targa_Sixty_Six"

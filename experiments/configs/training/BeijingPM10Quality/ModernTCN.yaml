@@ -1,0 +1,25 @@
+experiment_type: nn
+Architecture:
+  class: ModernTCN
+  parameters:
+    seq_len: 24
+    output_size: 1
+    d_model: 64
+    num_blocks: 4
+    large_kernel: 7
+    small_kernel: 5
+    patch_size: 1
+    patch_stride: 1
+    ffn_ratio: 4
+    dropout: 0.013216171740893616
+    head_dropout: 0.06102780036234006
+Training:
+  seed: 42
+  dataset_id: BeijingPM10Quality
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.0044558448696190665
+  loss_function: MSELoss

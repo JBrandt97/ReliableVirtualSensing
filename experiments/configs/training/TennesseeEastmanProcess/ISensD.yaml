@@ -1,0 +1,22 @@
+experiment_type: isensd
+Architecture:
+  class: TST
+  parameters:
+    seq_len: 20
+    d_model: 64
+    n_heads: 4
+    num_layers: 3
+    dim_feedforward: 256
+    output_size: 1
+    dropout: 0.03533628007226661
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer_params:
+    lr: 0.00036513116479148524
+  loss_function: MSELoss
+SensorDropout:
+  mode: nr

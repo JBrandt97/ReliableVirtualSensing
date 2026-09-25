@@ -1,0 +1,25 @@
+experiment_type: pgd
+Architecture:
+  class: TST
+  parameters:
+    seq_len: 50
+    d_model: 64
+    n_heads: 4
+    num_layers: 4
+    dim_feedforward: 256
+    output_size: 1
+    dropout: 0.03911931861714489
+Training:
+  seed: 42
+  dataset_id: VehicleDynamicsDataset
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer_params:
+    lr: 0.0007693002824449387
+  loss_function: MSELoss
+Adversarial:
+  epsilon: 0.2
+  step_size: 0.1
+  num_steps: 20
+  adv_ratio: 0.25

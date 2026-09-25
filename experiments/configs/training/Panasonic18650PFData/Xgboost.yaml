@@ -1,0 +1,13 @@
+experiment_type: tree
+Architecture:
+  class: XGBRegressor
+  parameters:
+    n_estimators: 2800
+    learning_rate: 0.009022018920433816
+    max_depth: 10
+    subsample: 0.5193182163409116
+    colsample_bytree: 0.9398250773769262
+    reg_lambda: 0.01798596344397389
+Training:
+  seed: 42
+  dataset_id: Panasonic18650PFData

@@ -1,0 +1,18 @@
+#!/bin/bash
+# Example SLURM submission script matching the compute setup described in the paper.
+# Adapt #SBATCH directives, module names, and the conda environment name to
+# your cluster. Submit with:  sbatch experiments/scripts/slurm_example.job
+
+#SBATCH --job-name=muvis_reproduce
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=20
+#SBATCH --time=400:00:00
+#SBATCH --output=logs/%x/%j.log
+#SBATCH --partition=gpu
+
+module load conda
+conda activate muvis-c
+
+# Full end-to-end reproduction. For partial runs, call the individual
+# scripts directly (train_models.sh, run_severity.sh).
+bash experiments/scripts/reproduce_all.sh

@@ -1,0 +1,21 @@
+experiment_type: nn
+Architecture:
+  class: TST
+  parameters:
+    seq_len: 24
+    d_model: 256
+    n_heads: 16
+    num_layers: 3
+    dim_feedforward: 512
+    output_size: 1
+    dropout: 0.055456162874957936
+Training:
+  seed: 42
+  dataset_id: BeijingPM25Quality
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.0009586713534192757
+  loss_function: MSELoss

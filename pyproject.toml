@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muvis-c"
+version = "0.1.0"
+description = "MuViS-C: Reliable Virtual Sensing — a multi-domain benchmark for robustness under sensor failures"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.13"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["Benchmarking robustness", "Deep learning", "Virtual sensing", "Sensor failure"]
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "scipy",
+    "sktime",
+    "torch",
+    "tqdm",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+experiments = [
+    "xgboost",
+    "catboost",
+    "joblib",
+    "transformers",
+    "xlstm",
+    "einops",
+    "pyreadr",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["muvis_c*"]

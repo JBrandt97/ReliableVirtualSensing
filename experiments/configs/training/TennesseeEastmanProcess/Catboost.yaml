@@ -1,0 +1,14 @@
+experiment_type: tree
+Architecture:
+  class: CatBoostRegressor
+  parameters:
+    iterations: 3000
+    learning_rate: 0.030795003795662527
+    depth: 10
+    l2_leaf_reg: 1.4669225191044066     
+    loss_function: RMSE
+    verbose: 100
+    allow_writing_files: False
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess

@@ -1,0 +1,13 @@
+experiment_type: tree
+Architecture:
+  class: XGBRegressor
+  parameters:
+    n_estimators: 1400
+    learning_rate: 0.0698155074518931
+    max_depth: 6
+    subsample: 0.8541464964821593
+    colsample_bytree: 0.5074906370342182
+    reg_lambda: 8.816995896202974
+Training:
+  seed: 42
+  dataset_id: BeijingPM25Quality

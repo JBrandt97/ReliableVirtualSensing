@@ -1,0 +1,14 @@
+experiment_type: tree
+Architecture:
+  class: CatBoostRegressor
+  parameters:
+    iterations: 3000
+    learning_rate: 0.06276696537116375
+    depth: 3
+    l2_leaf_reg: 1.3885426555596592
+    loss_function: RMSE
+    verbose: 100
+    allow_writing_files: False
+Training:
+  seed: 42
+  dataset_id: "VehicleDynamicsDataset"

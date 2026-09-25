@@ -1,0 +1,7 @@
+data/*
+exclude/
+.venv/
+.vscode/
+*.egg-info/
+__pycache__/
+.DS_Store

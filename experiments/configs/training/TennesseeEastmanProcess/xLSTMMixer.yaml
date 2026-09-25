@@ -1,0 +1,23 @@
+experiment_type: nn
+Architecture:
+  class: xLSTMMixer
+  parameters:
+    seq_len: 20
+    output_size: 1
+    xlstm_embedding_dim: 512
+    xlstm_num_heads: 8
+    xlstm_num_blocks: 4
+    xlstm_dropout: 0.11732197036643509
+    xlstm_conv1d_kernel_size: 0
+    num_mem_tokens: 4
+    backcast: true
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.006887139394714807
+  loss_function: MSELoss

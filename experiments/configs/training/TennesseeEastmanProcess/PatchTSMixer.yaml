@@ -1,0 +1,22 @@
+experiment_type: nn
+Architecture:
+  class: PatchTSMixer
+  parameters:
+    seq_len: 20
+    output_size: 1
+    d_model: 64
+    num_layers: 6
+    patch_length: 5
+    expansion_factor: 2
+    dropout: 0.253514530716234
+    head_dropout: 0.041599865909187565
+Training:
+  seed: 42
+  dataset_id: TennesseeEastmanProcess
+  dataset_class: SequentialDataset
+  batch_size: 256
+  num_epochs: 100
+  optimizer: Adam
+  optimizer_params:
+    lr: 0.0005147724025980709
+  loss_function: MSELoss
